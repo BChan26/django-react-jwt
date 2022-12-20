@@ -35,18 +35,13 @@ You should be able to run your tunr django app and go to `http://localhost:8000/
 
 
 <summary><strong>Simple react app working in heroku?</strong></summary>
-Create a React App that is white listed via CORS to make requests to the tunr django app. Once you are able to make a fetch request to `http://localhost:8000/artists` push it to heroku and replace config vars in heroku to point to the django address instead.
+Create a React App that is white listed via CORS to make requests to the tunr django app. 
 
 > if in your `.env` file you have a `REACT_APP_API_URL=http://localhost:8000/` then add the config var `REACT_APP_API_URL` in heroku with the value being the address of your django server in heroku. i.e. `mytunrdjangoapp.heruko.app` **\*\*Do not** copy this example url, make sure to look for your own.
 
 </details>
 
-<details>
-  <summary><strong>React app can fetch data from django both hosted in heroku?</strong></summary>
 
-> Your react app hosted in Heroku should be fetching data from your django instance in Heroku.
-
-</details>
 
 ## Install and Configure Django Rest Framework Simple JWT (DRF SJWT)
 
