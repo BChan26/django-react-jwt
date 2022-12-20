@@ -91,7 +91,7 @@ You will need to have Localhost:8000 runniing in one shell, and your pipenv shel
 curl \
   -X POST \
   -H "Content-Type: application/json" \
-  -d '{"username":"admin", "password":"admin"}' \
+  -d '{"username":"tunruser", "password":"tunr"}' \
   http://localhost:8000/api/token/
 ```
 
