@@ -26,23 +26,16 @@ We are going to use our tunr django app that we built up in our previous lessons
 ## Checklist:
 
 <details>
-  <summary><strong>Tuner App running with data</strong></summary>
+  <summary><strong>Tunr App running with data</strong></summary>
 
 You should be able to run your tunr django app and go to `http://localhost:8000/artists` and get a list of artists rendered through the django rest framework UI.
 
 </details>
 
-<details>
 
-<summary><strong>Tunr app working in heroku?</strong></summary>
-Following the [deployment tutorial](https://git.generalassemb.ly/seir-1018/heroku-django-deployment-1), your app should be reading its database settings and be succesfully deployed to heroku. Make sure to run `heroku run python manage.py migrate` and `heroku run python manage.py migrate` in heroku. Also replace config vars in heroku.
-
-You can use [this script](https://github.com/patgarcia/heroku-set-vars) to help you set and unset heroku vars from a `.env.heroku` file.
-
-</details>
 
 <summary><strong>Simple react app working in heroku?</strong></summary>
-Create a React App that is white listed via CORS to make requests to the tunr django app. Once your able to make a fetch request to `http://localhost:8000/artists` push it to heroku and replace config vars in heroku to point to the django address instead.
+Create a React App that is white listed via CORS to make requests to the tunr django app. Once you are able to make a fetch request to `http://localhost:8000/artists` push it to heroku and replace config vars in heroku to point to the django address instead.
 
 > if in your `.env` file you have a `REACT_APP_API_URL=http://localhost:8000/` then add the config var `REACT_APP_API_URL` in heroku with the value being the address of your django server in heroku. i.e. `mytunrdjangoapp.heruko.app` **\*\*Do not** copy this example url, make sure to look for your own.
 
