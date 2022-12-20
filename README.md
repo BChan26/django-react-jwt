@@ -199,34 +199,36 @@ urlpatterns = [
 
 ## React Client
 
-### React app setup and simple fetch
+### React app setup and simple Axios
 - Create a react app
-- Create simple fetch logic that `console.log` artists
+- Create simple Axios logic that `console.log` artists
 
 Navigate to a your sandbox and create the `tunr-react`
 
 `npx create-react-app tunr-react`
 
-Create and `.env.local` file and set the api url in an envarionment variable, in this case our server would be at `localhost:8000`.
-
-`REACT_APP_API_URL=http://localhost:8000/`
+/`
 
 Write the artist fetch logic to confirm your client can talk to your backend server. If it is, you should see an array of the artist objects in the database printed in the console.
 
 ```jsx
-  useEffect(() => {
-    const res = axios.get(process.env.REACT_APP_API_URL + 'artists/')
-      .then(res => {
-        console.log('The app is responding fine', res);
-      });
-  }, []);
+useEffect(() => {
+    
+    const getArtists = async () => {
+    const response = await axios.get('http://localhost:8000')
+    setData(response.data)
+    }
+
+    getArtists()
+    console.log(data)
+  }, [])
 ```
 
 Nothing shows up? Make sure that:
 - You're getting a `200` response code from your fetch
 - You have artist objects in your database
 
-### Authenticating a user a.k.a getting a token with `fetch`
+### Authenticating a user a.k.a getting a token with `Axios`
 
 Let's create a component with a controlled form that we'll use to submit the username and password to our `token.api` route in order to get a refresh and an access token.
 
