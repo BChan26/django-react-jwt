@@ -82,8 +82,10 @@ urlpatterns = [
 Now let's test getting a token from the command line using cURL. Make sure you have credentials of the superuser you created in `tunr` or create a new one.
 
 For testing this will be the example credentials:
-> username: admin
-> password: admin
+> username: tunruser
+> password: tunr
+
+You will need to have Localhost:8000 runniing in one shell, and your pipenv shell running in another terminal tab
 
 ```bash
 curl \
