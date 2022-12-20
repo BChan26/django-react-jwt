@@ -107,7 +107,14 @@ Now you should be able to get JWT tokens that can authorize your API calls. **Fo
 
 ## User serializer, view and urls
 
-To begin with user serialization lets start by creating an `accounts` app, if you already don't have one.
+To begin with user serialization lets start by creating an `accounts` app. All of our User information will go into here:
+
+```
+django-admin startapp accounts
+```
+
+
+
 
 To allow user creation all we need to do is serialized Django's user model inside `accounts.models`
 
