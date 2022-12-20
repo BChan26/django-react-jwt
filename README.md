@@ -113,11 +113,20 @@ To begin with user serialization lets start by creating an `accounts` app. All o
 django-admin startapp accounts
 ```
 
+We will create a User model inside of `accounts.models,` and then we will attach it to a Serializer. We will be exporting the Model, Serializer, Views, and URLs to our Tunr App, and our Tunr_Django Project 
+
+```
+# class User(models.Model):
+#   name = models.CharField(max_length=256)
+#   email = models.EmailField(max_length=256, blank=True, null=True)
+#   username = models.CharField(max_length=256)
+#   password = models.CharField(max_length=1024)
+
+#   def __str__(self):
+#     return self.name 
 
 
-
-To allow user creation all we need to do is serialized Django's user model inside `accounts.models`
-
+```
 #### Serializer
 ```python
 from rest_framework import serializers
